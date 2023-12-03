@@ -1,0 +1,72 @@
+id: use-dd
+snapshots:
+  'type X = unit { x: uint8 { if (True) self.x; } };':
+    fixed: 'type X = unit { x: uint8 { if (True) $$; } };'
+    labels:
+    - source: self.x
+      style: primary
+      start: 37
+      end: 43
+    - source: x
+      style: secondary
+      start: 16
+      end: 17
+    - source: 'x: uint8 { if (True) self.x; }'
+      style: secondary
+      start: 16
+      end: 46
+    - source: self
+      style: secondary
+      start: 37
+      end: 41
+    - source: self
+      style: secondary
+      start: 37
+      end: 41
+    - source: self.x
+      style: secondary
+      start: 37
+      end: 43
+    - source: x
+      style: secondary
+      start: 42
+      end: 43
+    - source: x
+      style: secondary
+      start: 42
+      end: 43
+  'type X = unit { x: uint8 { self.x; } };':
+    fixed: 'type X = unit { x: uint8 { $$; } };'
+    labels:
+    - source: self.x
+      style: primary
+      start: 27
+      end: 33
+    - source: x
+      style: secondary
+      start: 16
+      end: 17
+    - source: 'x: uint8 { self.x; }'
+      style: secondary
+      start: 16
+      end: 36
+    - source: self
+      style: secondary
+      start: 27
+      end: 31
+    - source: self
+      style: secondary
+      start: 27
+      end: 31
+    - source: self.x
+      style: secondary
+      start: 27
+      end: 33
+    - source: x
+      style: secondary
+      start: 32
+      end: 33
+    - source: x
+      style: secondary
+      start: 32
+      end: 33

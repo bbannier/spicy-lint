@@ -1,0 +1,8 @@
+id: use-dd
+valid:
+  - "type X = unit { x: uint8 { $$; } };"
+  - "type X = unit { x: uint8 { other.y; } };"
+  - "type X = unit { y: uint8 { self.x; } };"
+invalid:
+  - "type X = unit { x: uint8 { self.x; } };"
+  - "type X = unit { x: uint8 { if (True) self.x; } };"

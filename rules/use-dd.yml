@@ -1,0 +1,31 @@
+id: use-dd
+message: use $$ instead of field access
+severity: info
+language: spicy
+
+rule:
+  kind: "type_member"
+  has:
+    all:
+      - kind: "type_member_ident"
+        has:
+          pattern: "$$F"
+        inside:
+          kind: "type_member"
+          has:
+            kind: "expression"
+            has:
+              kind: "self_id"
+          inside:
+            kind: "field_decl"
+            stopBy: "end"
+            has:
+              field: "name"
+              kind: "ident"
+              pattern: "$$F"
+
+fix: "$$"
+
+note: |
+  Use '$$' to refer to a field in its hooks. This is more compact and requires
+  less changes if the field gets renamed.
