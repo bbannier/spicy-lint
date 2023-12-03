@@ -1,6 +1,6 @@
 # Linting rules for Spicy
 
-This repository contains a [Spicy](https://github.com/bbannier/spicy-lint.git)
+This repository contains a [Spicy](https://docs.zeek.org/projects/spicy/en/latest/)
 integration for [ast-grep(sg)](https://ast-grep.github.io/) and a collection of
 linting rules.
 
