@@ -1,0 +1,17 @@
+id: use-skip
+valid:
+  - 'type X = unit { : uint8 {$$;} };'
+  - 'type X = unit { : skip uint8; };'
+  - 'type X = unit { : skip uint8 {}; };'
+  - 'type X = unit { x: skip uint8; };'
+  - 'type X = unit { : Y[]; };'
+  - 'type X = unit { : bytes &eod -> self.my_sink; };'
+invalid:
+  - 'type X = unit { : uint8; };'
+  - 'type X = unit { : int64; };'
+  - 'type X = unit { : bytes &eod; };'
+
+  - 'type X = unit { : b""; };'
+  - 'type X = unit { : uint8(1); };'
+  - 'type X = unit { : uint8 {1;} };'
+  - 'type X = unit { : uint8 if(mod::var==1); };'

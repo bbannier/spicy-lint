@@ -1,0 +1,43 @@
+id: use-skip
+message: use 'skip' for anonymous field
+severity: info
+language: spicy
+rule:
+  kind: "field_decl"
+  pattern: "$F"
+  not:
+    any:
+      - has:
+          kind: "is_skip"
+      - has:
+          kind: "sink"
+      - has:
+          kind: "ident"
+          field: "name"
+      - has:
+          kind: "block"
+          has:
+            kind: "dd"
+            stopBy: end
+
+  # Restrict ourself to builtin types since user-defined types might have hooks attached elsewhere.
+  any:
+  - has:
+      kind: "typename"
+      stopBy: end
+      regex: "((u)?int\\d{1,2})|bytes"
+  - has:
+      kind: "bytes"
+
+transform:
+  FF:
+    replace:
+      replace: "^:"
+      by: ": skip "
+      source: "$F"
+
+fix: "$FF"
+
+note: |
+  If a field is anonymous and not accessed via '$$' it can be declared 'skip'
+  so it is not stored.
