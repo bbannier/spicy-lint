@@ -1,0 +1,11 @@
+ruleDirs:
+  - ./rules
+testConfigs:
+  - testDir: ./rule-tests
+utilDirs:
+  - ./utils
+
+customLanguages:
+  spicy:
+    libraryPath: tree-sitter-spicy/lib/spicy.so
+    extensions: [spicy]

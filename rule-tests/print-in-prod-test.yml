@@ -1,0 +1,8 @@
+id: print-in-prod
+invalid:
+  - "on A::%done { print 1; }"
+  - "on A::%done { if (True) print 1; }"
+  - "type X = unit { x: uint8 { print $$; }};"
+valid:
+  - "on A::%done %debug { print 1; }"
+  - "type X = unit { x: uint8 %debug { print $$; }};"

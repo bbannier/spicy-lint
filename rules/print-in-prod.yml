@@ -1,0 +1,25 @@
+id: print-in-prod
+message: print in non-debug code found
+severity: info
+language: spicy
+
+rule:
+  pattern: "print"
+  inside:
+    any:
+      - kind: "hook_decl"
+        not:
+          has:
+            kind: "is_debug"
+      - kind: "block"
+        inside:
+          kind: "field_decl"
+          not:
+            has:
+              kind: "is_debug"
+    stopBy: end
+
+note: |
+  Usually 'print' statements are used for debugging. Adding them in production
+  code can introduce overhead, so it is best to either remove them, or move
+  them to hooks marked '%debug'.
