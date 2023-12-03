@@ -22,12 +22,12 @@ rule:
 
   # Restrict ourself to builtin types since user-defined types might have hooks attached elsewhere.
   any:
-  - has:
-      kind: "typename"
-      stopBy: end
-      regex: "((u)?int\\d{1,2})|bytes"
-  - has:
-      kind: "bytes"
+    - has:
+        kind: "typename"
+        stopBy: end
+        regex: "((u)?int\\d{1,2})|bytes"
+    - has:
+        kind: "bytes"
 
 transform:
   FF:

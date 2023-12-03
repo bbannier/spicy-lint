@@ -1,0 +1,22 @@
+{
+  "name": "spicy-lint",
+  "version": "0.0.1",
+  "description": "Spicy linting setup",
+  "author": {
+    "name": "Benjamin Bannier",
+    "email": "bbannier@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "Spicy",
+    "linter"
+  ],
+  "dependencies": {
+    "@ast-grep/cli": "^0.14.2",
+    "tree-sitter-cli": "^0.20.8"
+  },
+  "scripts": {
+    "install": "bash -c '(cd tree-sitter-spicy && tree-sitter generate && TREE_SITTER_LIBDIR=../lib tree-sitter test >/dev/null)'",
+    "test": "sg test"
+  }
+}
