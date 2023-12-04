@@ -1,6 +1,6 @@
 id: use-dd
 message: use $$ instead of field access
-severity: info
+severity: warning
 language: spicy
 
 rule:

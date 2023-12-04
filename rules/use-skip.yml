@@ -1,6 +1,6 @@
 id: use-skip
 message: use 'skip' for anonymous field
-severity: info
+severity: warning
 language: spicy
 rule:
   kind: "field_decl"

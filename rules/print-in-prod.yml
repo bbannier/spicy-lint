@@ -1,6 +1,6 @@
 id: print-in-prod
 message: print in non-debug code found
-severity: info
+severity: warning
 language: spicy
 
 rule:
