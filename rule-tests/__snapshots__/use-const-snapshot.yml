@@ -1,0 +1,40 @@
+id: use-const
+snapshots:
+  global a = b"";:
+    fixed: const a = b"";
+    labels:
+    - source: global
+      style: primary
+      start: 0
+      end: 6
+    - source: b""
+      style: secondary
+      start: 11
+      end: 14
+    - source: b""
+      style: secondary
+      start: 11
+      end: 14
+    - source: global a = b"";
+      style: secondary
+      start: 0
+      end: 15
+  global x = 1;:
+    fixed: const x = 1;
+    labels:
+    - source: global
+      style: primary
+      start: 0
+      end: 6
+    - source: '1'
+      style: secondary
+      start: 11
+      end: 12
+    - source: '1'
+      style: secondary
+      start: 11
+      end: 12
+    - source: global x = 1;
+      style: secondary
+      start: 0
+      end: 13

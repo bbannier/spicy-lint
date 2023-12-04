@@ -1,0 +1,8 @@
+id: use-const
+valid:
+  - "global x: m::X;"
+  - "global x: m::X = [];"
+  - "const x = 1;"
+invalid:
+  - "global x = 1;"
+  - 'global a = b"";'

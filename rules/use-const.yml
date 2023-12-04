@@ -1,0 +1,19 @@
+id: use-const
+message: Prefer 'const' over 'global' if possible
+severity: hint
+language: spicy
+rule:
+  kind: "linkage"
+  regex: "global"
+  inside:
+    kind: "var_decl"
+    has:
+      field: "init"
+      kind: "expression"
+      any:
+        - has:
+            kind: "bytes"
+        - has:
+            kind: "integer"
+
+fix: "const"
