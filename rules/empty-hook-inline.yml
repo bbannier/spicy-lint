@@ -1,0 +1,14 @@
+id: empty-hook-inline
+message: Remove empty hook
+severity: error
+language: spicy
+
+rule:
+  kind: "block"
+  inside:
+    kind: "field_decl"
+  not:
+    has:
+      kind: "statement"
+
+fix: ";"

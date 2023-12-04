@@ -1,0 +1,5 @@
+id: empty-hook-inline
+valid:
+  - "type X = unit { x: uint8 {1;} };"
+invalid:
+  - "type X = unit { x: uint8 {} };"

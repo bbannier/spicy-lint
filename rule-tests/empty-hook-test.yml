@@ -1,0 +1,6 @@
+id: empty-hook
+valid:
+  - "on X::x {1;}"
+  - "on X::x {1;2;}"
+invalid:
+  - "on X::x {}"

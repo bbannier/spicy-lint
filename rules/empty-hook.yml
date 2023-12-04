@@ -1,0 +1,16 @@
+id: empty-hook
+message: Remove empty hook
+severity: error
+language: spicy
+
+rule:
+  kind: "hook_decl"
+  has:
+    kind: "statement"
+    has:
+      kind: "block"
+      not:
+        has:
+          kind: "statement"
+
+fix: ""

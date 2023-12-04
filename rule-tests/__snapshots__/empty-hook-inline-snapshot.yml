@@ -1,0 +1,13 @@
+id: empty-hook-inline
+snapshots:
+  'type X = unit { x: uint8 {} };':
+    fixed: 'type X = unit { x: uint8 ; };'
+    labels:
+    - source: '{}'
+      style: primary
+      start: 25
+      end: 27
+    - source: 'x: uint8 {}'
+      style: secondary
+      start: 16
+      end: 27

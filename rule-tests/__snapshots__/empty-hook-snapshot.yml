@@ -1,0 +1,17 @@
+id: empty-hook
+snapshots:
+  on X::x {}:
+    fixed: ''
+    labels:
+    - source: on X::x {}
+      style: primary
+      start: 0
+      end: 10
+    - source: '{}'
+      style: secondary
+      start: 8
+      end: 10
+    - source: '{}'
+      style: secondary
+      start: 8
+      end: 10
