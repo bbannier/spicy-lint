@@ -23,5 +23,5 @@ note: |
   variables, e.g., they could be inlined while access to a 'global' is always
   through an indirection.
 
-  This role does not validate whether the 'global' is modified elsewhere so it
+  This rule does not validate whether the 'global' is modified elsewhere so it
   can have FALSE POSITIVES.
