@@ -12,7 +12,7 @@
     "linter"
   ],
   "dependencies": {
-    "@ast-grep/cli": "^0.14.2",
+    "@ast-grep/cli": "^0.14.3",
     "tree-sitter-cli": "^0.20.8"
   },
   "scripts": {
