@@ -1,0 +1,56 @@
+id: unused-parameter
+snapshots:
+  'function foo(x: uint8) {}':
+    labels:
+    - source: x
+      style: primary
+      start: 13
+      end: 14
+    - source: foo
+      style: secondary
+      start: 9
+      end: 12
+    - source: '{}'
+      style: secondary
+      start: 23
+      end: 25
+    - source: 'function foo(x: uint8) {}'
+      style: secondary
+      start: 0
+      end: 25
+  'function foo(x: uint8, y: uint8) { x; }':
+    labels:
+    - source: y
+      style: primary
+      start: 23
+      end: 24
+    - source: x
+      style: secondary
+      start: 13
+      end: 14
+    - source: '{ x; }'
+      style: secondary
+      start: 33
+      end: 39
+    - source: 'function foo(x: uint8, y: uint8) { x; }'
+      style: secondary
+      start: 0
+      end: 39
+  'function foo(x: uint8, y: uint8) {}':
+    labels:
+    - source: x
+      style: primary
+      start: 13
+      end: 14
+    - source: foo
+      style: secondary
+      start: 9
+      end: 12
+    - source: '{}'
+      style: secondary
+      start: 33
+      end: 35
+    - source: 'function foo(x: uint8, y: uint8) {}'
+      style: secondary
+      start: 0
+      end: 35

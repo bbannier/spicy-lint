@@ -1,0 +1,25 @@
+id: unused-parameter
+message: Parameter is not used
+severity: error
+language: spicy
+rule:
+  kind: "ident"
+  pattern: $ID
+  all:
+    # Reject the original function ident. All parameter idents follow it, but
+    # it doesn't follow anything itself.
+    - follows:
+        kind: "ident"
+        stopBy: end
+
+    - inside:
+        kind: "function_decl"
+        all:
+          - has:
+              kind: "block"
+          - not:
+              has:
+                kind: "block"
+                has:
+                  pattern: $ID
+                  stopBy: end

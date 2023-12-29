@@ -1,0 +1,10 @@
+id: unused-parameter
+valid:
+  - "function foo() {}"
+  - "function foo(x: uint8) { x; }"
+  - "function foo(x: uint8, y: uint8) { x; y; }"
+  - "function foo(x: uint8, y: uint8);"
+invalid:
+  - "function foo(x: uint8) {}"
+  - "function foo(x: uint8, y: uint8) { x; }"
+  - "function foo(x: uint8, y: uint8) {}"
