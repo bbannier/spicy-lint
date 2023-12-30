@@ -17,6 +17,7 @@
   },
   "scripts": {
     "install": "bash -c '(cd tree-sitter-spicy && tree-sitter generate && TREE_SITTER_LIBDIR=../lib tree-sitter test >/dev/null)'",
-    "test": "sg test"
+    "test": "sg test",
+    "parse": "node parse.js"
   }
 }
