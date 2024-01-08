@@ -9,7 +9,7 @@ rule:
     all:
       - kind: "type_member_ident"
         has:
-          pattern: "$$F"
+          pattern: "$F"
         inside:
           kind: "type_member"
           has:
@@ -22,7 +22,7 @@ rule:
             has:
               field: "name"
               kind: "ident"
-              pattern: "$$F"
+              pattern: "$F"
 
 fix: "$$"
 
