@@ -1,7 +1,7 @@
 id: use-skip
 snapshots:
   'type X = unit { : b""; };':
-    fixed: 'type X = unit { : skip  b""; };'
+    fixed: 'type X = unit { : skip b""; };'
     labels:
     - source: ': b"";'
       style: primary
@@ -12,7 +12,7 @@ snapshots:
       start: 18
       end: 21
   'type X = unit { : bytes &eod; };':
-    fixed: 'type X = unit { : skip  bytes &eod; };'
+    fixed: 'type X = unit { : skip bytes &eod; };'
     labels:
     - source: ': bytes &eod;'
       style: primary
@@ -23,7 +23,7 @@ snapshots:
       start: 18
       end: 23
   'type X = unit { : int64; };':
-    fixed: 'type X = unit { : skip  int64; };'
+    fixed: 'type X = unit { : skip int64; };'
     labels:
     - source: ': int64;'
       style: primary
@@ -34,7 +34,7 @@ snapshots:
       start: 18
       end: 23
   'type X = unit { : uint8 if(mod::var==1); };':
-    fixed: 'type X = unit { : skip  uint8 if(mod::var==1); };'
+    fixed: 'type X = unit { : skip uint8 if(mod::var==1); };'
     labels:
     - source: ': uint8 if(mod::var==1);'
       style: primary
@@ -45,7 +45,7 @@ snapshots:
       start: 18
       end: 23
   'type X = unit { : uint8 {1;} };':
-    fixed: 'type X = unit { : skip  uint8 {1;} };'
+    fixed: 'type X = unit { : skip uint8 {1;} };'
     labels:
     - source: ': uint8 {1;}'
       style: primary
@@ -56,7 +56,7 @@ snapshots:
       start: 18
       end: 23
   'type X = unit { : uint8(1); };':
-    fixed: 'type X = unit { : skip  uint8(1); };'
+    fixed: 'type X = unit { : skip uint8(1); };'
     labels:
     - source: ': uint8(1);'
       style: primary
@@ -67,7 +67,7 @@ snapshots:
       start: 18
       end: 23
   'type X = unit { : uint8; };':
-    fixed: 'type X = unit { : skip  uint8; };'
+    fixed: 'type X = unit { : skip uint8; };'
     labels:
     - source: ': uint8;'
       style: primary

@@ -33,7 +33,7 @@ transform:
   FF:
     replace:
       replace: "^:"
-      by: ": skip "
+      by: ": skip"
       source: "$F"
 
 fix: "$FF"
