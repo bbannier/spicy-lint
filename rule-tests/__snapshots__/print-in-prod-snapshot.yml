@@ -2,30 +2,30 @@ id: print-in-prod
 snapshots:
   on A::%done { if (True) print 1; }:
     labels:
-    - source: print
+    - source: print 1;
       style: primary
       start: 24
-      end: 29
+      end: 32
     - source: on A::%done { if (True) print 1; }
       style: secondary
       start: 0
       end: 34
   on A::%done { print 1; }:
     labels:
-    - source: print
+    - source: print 1;
       style: primary
       start: 14
-      end: 19
+      end: 22
     - source: on A::%done { print 1; }
       style: secondary
       start: 0
       end: 24
   'type X = unit { x: uint8 { print $$; }};':
     labels:
-    - source: print
+    - source: print $$;
       style: primary
       start: 27
-      end: 32
+      end: 36
     - source: 'x: uint8 { print $$; }'
       style: secondary
       start: 16
