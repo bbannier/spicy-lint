@@ -13,7 +13,7 @@
   ],
   "dependencies": {
     "@ast-grep/cli": "^0.19.3",
-    "tree-sitter-cli": "^0.21.0"
+    "tree-sitter-cli": "^0.22.1"
   },
   "scripts": {
     "install": "bash -c '(cd tree-sitter-spicy && tree-sitter generate && TREE_SITTER_LIBDIR=../lib tree-sitter test >/dev/null)'",
