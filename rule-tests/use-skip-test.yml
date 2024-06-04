@@ -6,6 +6,8 @@ valid:
   - "type X = unit { x: skip uint8; };"
   - "type X = unit { : Y[]; };"
   - "type X = unit { : bytes &eod -> self.my_sink; };"
+  - "type X = unit { switch { -> : bytes &eod -> self.my_sink; }; };"
+  - "type X = unit { switch (a) { 1 -> : bytes &eod -> my_sink; }; };"
 invalid:
   - "type X = unit { : uint8; };"
   - "type X = unit { : int64; };"

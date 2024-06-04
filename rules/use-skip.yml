@@ -19,6 +19,9 @@ rule:
           has:
             kind: "dd"
             stopBy: end
+      # `skip` is not supported in unit switch.
+      - inside:
+          kind: "unit_switch_case"
 
   # Restrict ourself to builtin types since user-defined types might have hooks attached elsewhere.
   any:
