@@ -3,14 +3,12 @@ message: Parameter is not used
 severity: error
 language: spicy
 rule:
-  kind: "ident"
-  pattern: $ID
+  kind: "function_arg"
+
   all:
-    # Reject the original function ident. All parameter idents follow it, but
-    # it doesn't follow anything itself.
-    - follows:
+    - has:
         kind: "ident"
-        stopBy: end
+        pattern: $ID
 
     - inside:
         kind: "function_decl"

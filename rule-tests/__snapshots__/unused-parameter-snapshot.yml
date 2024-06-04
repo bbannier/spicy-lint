@@ -2,14 +2,14 @@ id: unused-parameter
 snapshots:
   'function foo(x: uint8) {}':
     labels:
-    - source: x
+    - source: 'x: uint8'
       style: primary
       start: 13
-      end: 14
-    - source: foo
+      end: 21
+    - source: x
       style: secondary
-      start: 9
-      end: 12
+      start: 13
+      end: 14
     - source: '{}'
       style: secondary
       start: 23
@@ -20,14 +20,14 @@ snapshots:
       end: 25
   'function foo(x: uint8, y: uint8) { x; }':
     labels:
-    - source: y
+    - source: 'y: uint8'
       style: primary
       start: 23
-      end: 24
-    - source: x
+      end: 31
+    - source: y
       style: secondary
-      start: 13
-      end: 14
+      start: 23
+      end: 24
     - source: '{ x; }'
       style: secondary
       start: 33
@@ -38,14 +38,14 @@ snapshots:
       end: 39
   'function foo(x: uint8, y: uint8) {}':
     labels:
-    - source: x
+    - source: 'x: uint8'
       style: primary
       start: 13
-      end: 14
-    - source: foo
+      end: 21
+    - source: x
       style: secondary
-      start: 9
-      end: 12
+      start: 13
+      end: 14
     - source: '{}'
       style: secondary
       start: 33
