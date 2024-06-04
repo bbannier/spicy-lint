@@ -16,7 +16,7 @@
     "tree-sitter-cli": "^0.22.6"
   },
   "scripts": {
-    "install": "bash -c '(cd tree-sitter-spicy && tree-sitter generate && TREE_SITTER_LIBDIR=../lib tree-sitter test >/dev/null)'",
+    "install": "bash -c '(cd tree-sitter-spicy && tree-sitter generate && TREE_SITTER_LIBDIR=../lib tree-sitter test >/dev/null && (mv ../lib/spicy.dylib ../lib/spicy.so >/dev/null || true))'",
     "test": "sg test",
     "parse": "node parse.js"
   }
