@@ -10,7 +10,8 @@ rule:
       - has:
           kind: "is_skip"
       - has:
-          kind: "sink"
+          field: "sink"
+          kind: "expression"
       - has:
           kind: "ident"
           field: "name"
