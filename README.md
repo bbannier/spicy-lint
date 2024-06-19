@@ -9,6 +9,7 @@ linting rules.
 Building this package requires Node. To build ast-grep support for Spicy run
 
 ```console
+git submodule update --init --recursive
 npm install
 ```
 
