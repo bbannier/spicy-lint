@@ -13,11 +13,9 @@
   ],
   "dependencies": {
     "@ast-grep/cli": "^0.24.0",
-    "tree-sitter-cli": "^0.22.6"
+    "tree-sitter-spicy": "github:bbannier/tree-sitter-spicy"
   },
   "scripts": {
-    "install": "bash -c '(cd tree-sitter-spicy && tree-sitter generate && TREE_SITTER_LIBDIR=../lib tree-sitter test >/dev/null && (mv ../lib/spicy.dylib ../lib/spicy.so 2>/dev/null || true))'",
-    "test": "sg test",
-    "parse": "node parse.js"
+    "test": "sg test"
   }
 }

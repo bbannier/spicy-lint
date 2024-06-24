@@ -5,5 +5,5 @@ testConfigs:
 
 customLanguages:
   spicy:
-    libraryPath: ./lib/spicy.so
+    libraryPath: node_modules/tree-sitter-spicy/build/Release/tree_sitter_spicy_binding.node
     extensions: [spicy]
