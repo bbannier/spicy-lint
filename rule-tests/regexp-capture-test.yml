@@ -1,0 +1,9 @@
+id: regexp-capture
+valid:
+  - "type X = unit { :/123/; };"
+  - "type X = unit { :/(123)/ &nosub; };"
+  - "type X = unit { :/(123)/ { print $1; } };"
+invalid:
+  - "type X = unit { :/(123)/; };"
+  - "type X = unit { :/(123)/ &chunked; };"
+  - "type X = unit { :/(123)/ { print 1; } };"

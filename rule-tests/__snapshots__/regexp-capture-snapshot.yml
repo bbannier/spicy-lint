@@ -1,0 +1,35 @@
+id: regexp-capture
+snapshots:
+  type X = unit { :/(123)/ &chunked; };:
+    fixed: type X = unit { :/(123)/ &nosub &chunked; };
+    labels:
+    - source: /(123)/
+      style: primary
+      start: 17
+      end: 24
+    - source: :/(123)/ &chunked;
+      style: secondary
+      start: 16
+      end: 34
+  type X = unit { :/(123)/ { print 1; } };:
+    fixed: type X = unit { :/(123)/ &nosub { print 1; } };
+    labels:
+    - source: /(123)/
+      style: primary
+      start: 17
+      end: 24
+    - source: :/(123)/ { print 1; }
+      style: secondary
+      start: 16
+      end: 37
+  type X = unit { :/(123)/; };:
+    fixed: type X = unit { :/(123)/ &nosub; };
+    labels:
+    - source: /(123)/
+      style: primary
+      start: 17
+      end: 24
+    - source: :/(123)/;
+      style: secondary
+      start: 16
+      end: 25

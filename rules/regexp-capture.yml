@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/ast-grep/ast-grep/main/schemas/rule.json
+
+id: regexp-capture
+message: Use '&nosub' regexps if not using capture groups
+severity: warning
+language: spicy
+rule:
+  kind: "regexp"
+  pattern: "$RE"
+  # Assume every occurrance of a pair of opening/closing parens corresponds
+  # to a capture. This e.g., ignores the existance of escaped parens.
+  regex: "/\\(.*\\)/"
+  all:
+    - inside:
+        kind: "field_decl"
+    - not:
+        precedes:
+          kind: "attribute"
+          regex: "&nosub"
+    - not:
+        precedes:
+          kind: "block"
+          has:
+            kind: "capture_group"
+            stopBy: end
+
+fix: "$RE &nosub"
+
+note: |
+  Regexp captures come with overhead, and if the groups are not needed one can
+  avoid that overhead by setting the field '&nosub'.
+
+  This lint misses uses of the capture groups in hooks not defined at the
+  field. If you are sure the capture group is used in a such a hook you can
+  suppress this lint by adding '// ast-grep-ignore: regexp-capture' above the
+  line triggering the lint.
