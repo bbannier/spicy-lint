@@ -7,6 +7,7 @@ language: spicy
 
 rule:
   kind: "print"
+  pattern: "$P"
   inside:
     any:
       - kind: "hook_decl"
@@ -20,6 +21,8 @@ rule:
             has:
               kind: "is_debug"
     stopBy: end
+
+fix: ""
 
 note: |
   Usually 'print' statements are used for debugging. Adding them in production

@@ -1,6 +1,7 @@
 id: print-in-prod
 snapshots:
   on A::%done { if (True) print 1; }:
+    fixed: on A::%done { if (True)  }
     labels:
     - source: print 1;
       style: primary
@@ -11,6 +12,7 @@ snapshots:
       start: 0
       end: 34
   on A::%done { print 1; }:
+    fixed: on A::%done {  }
     labels:
     - source: print 1;
       style: primary
@@ -21,6 +23,7 @@ snapshots:
       start: 0
       end: 24
   'type X = unit { x: uint8 { print $$; }};':
+    fixed: 'type X = unit { x: uint8 {  }};'
     labels:
     - source: print $$;
       style: primary
