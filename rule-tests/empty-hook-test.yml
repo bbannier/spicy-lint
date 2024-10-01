@@ -2,5 +2,7 @@ id: empty-hook
 valid:
   - "on X::x {1;}"
   - "on X::x {1;2;}"
+  - "type X = unit { on %done {1;} };"
 invalid:
   - "on X::x {}"
+  - "type X = unit { on %done {} };"
