@@ -25,6 +25,13 @@ rule:
               field: "name"
               kind: "ident"
               pattern: "$F"
+        not:
+          inside:
+            kind: "field_decl"
+            stopBy: "end"
+            has:
+              kind: "attribute"
+              regex: "&convert"
 
 fix: "$$"
 
