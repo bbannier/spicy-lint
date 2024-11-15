@@ -11,3 +11,12 @@ repos:
     hooks:
       - id: prettier
         exclude: "^rule-tests/__snapshots__"
+
+  - repo: https://github.com/maxwinterstein/shfmt-py
+    rev: v3.7.0.1
+    hooks:
+      - id: shfmt
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.10.0.1
+    hooks:
+      - id: shellcheck
