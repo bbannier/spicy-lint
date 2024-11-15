@@ -18,5 +18,5 @@
   "scripts": {
     "test": "sg test"
   },
-  "bin": "./main.js"
+  "bin": "./spicy-lint"
 }
