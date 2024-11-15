@@ -17,5 +17,6 @@
   },
   "scripts": {
     "test": "sg test"
-  }
+  },
+  "bin": "./main.js"
 }
