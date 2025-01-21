@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/ast-grep/ast-grep/main/schemas/rule.json
+
+id: skip-bytes
+message: Prefer 'skip bytes' over 'void' fields with '&size'
+severity: error # error, warning, info, hint
+language: spicy
+rule:
+  kind: "void"
+  inside:
+    kind: "field_decl"
+    has:
+      kind: "attribute"
+      field: "attributes"
+      has:
+        kind: "attribute_name"
+        regex: "&size"
+
+fix: "skip bytes"

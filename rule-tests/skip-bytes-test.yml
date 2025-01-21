@@ -1,0 +1,7 @@
+id: skip-bytes
+valid:
+  - "type X = unit { foo: skip bytes &size=1; };"
+  - "type X = unit { : void; };"
+  - "type X = unit { : void &requires=True; };"
+invalid:
+  - "type X = unit { : void &size=1; };"

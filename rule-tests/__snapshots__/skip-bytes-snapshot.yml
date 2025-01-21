@@ -1,0 +1,21 @@
+id: skip-bytes
+snapshots:
+  'type X = unit { : void &size=1; };':
+    fixed: 'type X = unit { : skip bytes &size=1; };'
+    labels:
+    - source: void
+      style: primary
+      start: 18
+      end: 22
+    - source: '&size'
+      style: secondary
+      start: 23
+      end: 28
+    - source: '&size=1'
+      style: secondary
+      start: 23
+      end: 30
+    - source: ': void &size=1;'
+      style: secondary
+      start: 16
+      end: 31
