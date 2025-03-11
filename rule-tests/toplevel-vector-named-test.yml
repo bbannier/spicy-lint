@@ -8,3 +8,4 @@ valid:
   - "public type X = struct { a: uint8[]; b: uint8; };"
 invalid:
   - "public type X = unit { a: uint8[]; };"
+  - "public type X = unit { a: uint8()[]; };"

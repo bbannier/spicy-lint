@@ -1,5 +1,28 @@
 id: toplevel-vector-named
 snapshots:
+  'public type X = unit { a: uint8()[]; };':
+    fixed: 'public type X = unit { : uint8()[]; };'
+    labels:
+    - source: a
+      style: primary
+      start: 23
+      end: 24
+    - source: a
+      style: secondary
+      start: 23
+      end: 24
+    - source: uint8()[]
+      style: secondary
+      start: 26
+      end: 35
+    - source: 'public type X = unit { a: uint8()[]; };'
+      style: secondary
+      start: 0
+      end: 39
+    - source: 'a: uint8()[];'
+      style: secondary
+      start: 23
+      end: 36
   'public type X = unit { a: uint8[]; };':
     fixed: 'public type X = unit { : uint8[]; };'
     labels:

@@ -17,10 +17,18 @@ rule:
           field: "name"
           kind: "ident"
           pattern: "$NAME"
-      - has:
-          field: "type_"
-          kind: "typename"
-          regex: "\\[\\]"
+      - any:
+          - has:
+              field: "type_"
+              kind: "typename"
+              regex: "\\[\\]"
+          - has:
+              field: "type_"
+              kind: "vector"
+              not:
+                has:
+                  kind: "expression" # vector size
+
     inside:
       kind: "type_decl"
 
