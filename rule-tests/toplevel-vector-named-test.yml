@@ -1,0 +1,10 @@
+id: toplevel-vector-named
+valid:
+  - "public type X = unit { : uint8[]; };"
+  - "public type X = unit { a: uint8; };"
+  - "public type X = unit { a: uint8[1]; };"
+  - "public type X = unit { a: uint8[self.size]; };"
+  - "public type X = struct { a: uint8[]; };"
+  - "public type X = struct { a: uint8[]; b: uint8; };"
+invalid:
+  - "public type X = unit { a: uint8[]; };"

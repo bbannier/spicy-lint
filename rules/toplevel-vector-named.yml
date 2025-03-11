@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/ast-grep/ast-grep/main/schemas/rule.json
+
+id: toplevel-vector-named
+message: Public units are entry points and could receive unbounded amounts of data and should not store unbounded number of mesages
+severity: error
+language: spicy
+rule:
+  # We want to rewrite the field name so match it here. We check it again below.
+  kind: "ident"
+  regex: "\\w+" # Name is not empty.
+  pattern: "$NAME" # Anchor a pattern here and validate it below.
+  inside:
+    kind: "field_decl"
+    all:
+      - has:
+          # Refers to topmost matcher.
+          field: "name"
+          kind: "ident"
+          pattern: "$NAME"
+      - has:
+          field: "type_"
+          kind: "typename"
+          regex: "\\[\\]"
+    inside:
+      kind: "type_decl"
+
+# utils: Extract repeated rule as local utility here.
+# note: Add detailed explanation for the rule.
+
+# Delete the name
+fix: ""
