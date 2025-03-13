@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/ast-grep/ast-grep/main/schemas/rule.json
 
 id: toplevel-vector-named
-message: Public units are entry points and could receive unbounded amounts of data and should not store unbounded number of mesages
+message: Public units are entry points and could receive unbounded amounts of data
 severity: error
 language: spicy
 rule:
