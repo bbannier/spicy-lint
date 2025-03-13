@@ -15,6 +15,10 @@ snapshots:
       style: secondary
       start: 26
       end: 35
+    - source: public
+      style: secondary
+      start: 0
+      end: 6
     - source: 'public type X = unit { a: uint8()[]; };'
       style: secondary
       start: 0
@@ -38,6 +42,10 @@ snapshots:
       style: secondary
       start: 26
       end: 33
+    - source: public
+      style: secondary
+      start: 0
+      end: 6
     - source: 'public type X = unit { a: uint8[]; };'
       style: secondary
       start: 0

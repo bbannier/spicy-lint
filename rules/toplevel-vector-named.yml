@@ -28,9 +28,11 @@ rule:
               not:
                 has:
                   kind: "expression" # vector size
-
     inside:
       kind: "type_decl"
+      has:
+        kind: "visibility"
+        regex: "public"
 
 # utils: Extract repeated rule as local utility here.
 # note: Add detailed explanation for the rule.
