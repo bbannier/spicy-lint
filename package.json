@@ -12,7 +12,7 @@
     "linter"
   ],
   "dependencies": {
-    "@ast-grep/cli": "^0.38.5",
+    "@ast-grep/cli": "^0.38.6",
     "tree-sitter-spicy": "github:bbannier/tree-sitter-spicy"
   },
   "scripts": {
