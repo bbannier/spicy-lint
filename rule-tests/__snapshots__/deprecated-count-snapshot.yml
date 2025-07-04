@@ -1,0 +1,56 @@
+id: deprecated-count
+snapshots:
+  'type X = unit { x: uint8[] &count=42 &requires=True; };':
+    fixed: 'type X = unit { x: uint8[42]  &requires=True; };'
+    labels:
+    - source: 'x: uint8[] &count=42 &requires=True;'
+      style: primary
+      start: 16
+      end: 52
+    - source: '&count'
+      style: secondary
+      start: 27
+      end: 33
+    - source: '42'
+      style: secondary
+      start: 34
+      end: 36
+    - source: '&count=42'
+      style: secondary
+      start: 27
+      end: 36
+    - source: uint8
+      style: secondary
+      start: 19
+      end: 24
+    - source: uint8[]
+      style: secondary
+      start: 19
+      end: 26
+  'type X = unit { x: uint8[] &count=42; };':
+    fixed: 'type X = unit { x: uint8[42] ; };'
+    labels:
+    - source: 'x: uint8[] &count=42;'
+      style: primary
+      start: 16
+      end: 37
+    - source: '&count'
+      style: secondary
+      start: 27
+      end: 33
+    - source: '42'
+      style: secondary
+      start: 34
+      end: 36
+    - source: '&count=42'
+      style: secondary
+      start: 27
+      end: 36
+    - source: uint8
+      style: secondary
+      start: 19
+      end: 24
+    - source: uint8[]
+      style: secondary
+      start: 19
+      end: 26

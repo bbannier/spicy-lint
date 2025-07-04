@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/ast-grep/ast-grep/main/schemas/rule.json
+
+id: deprecated-count
+message: "'&count=N' is deprecated, prefer '[N]' syntax"
+severity: error # error, warning, info, hint
+language: spicy
+rule:
+  kind: field_decl
+  pattern: $FIELD
+  all:
+    - has:
+        kind: attribute
+        pattern: $ATTR
+        all:
+          - has:
+              kind: attribute_name
+              regex: "&count"
+          - has:
+              kind: expression
+              pattern: $COUNT
+    - has:
+        kind: typename
+        pattern: $FIELD_TYPE
+        has:
+          kind: ident
+          pattern: $TYPE
+
+rewriters:
+  - id: remove-count
+    rule:
+      pattern: $ATTR
+    fix: ""
+  - id: count-in-vec
+    rule:
+      pattern: $FIELD_TYPE
+    fix: $TYPE[$COUNT]
+
+transform:
+  NEW_FIELD:
+    rewrite:
+      rewriters:
+        - remove-count
+        - count-in-vec
+      source: $FIELD
+
+fix: $NEW_FIELD

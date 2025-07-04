@@ -1,0 +1,7 @@
+id: deprecated-count
+valid:
+  - "type X = unit { x: bytes &size=1; };"
+  - "type X = unit { x: uint8; };"
+invalid:
+  - "type X = unit { x: uint8[] &count=42; };"
+  - "type X = unit { x: uint8[] &count=42 &requires=True; };"
