@@ -11,20 +11,12 @@ snapshots:
       style: secondary
       start: 8
       end: 10
-    - source: '{}'
-      style: secondary
-      start: 8
-      end: 10
   type X = unit { on %done {} };:
     fixed: type X = unit {  };
     labels:
     - source: on %done {}
       style: primary
       start: 16
-      end: 27
-    - source: '{}'
-      style: secondary
-      start: 25
       end: 27
     - source: '{}'
       style: secondary

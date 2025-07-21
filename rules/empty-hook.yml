@@ -8,11 +8,10 @@ language: spicy
 rule:
   kind: "hook_decl"
   has:
-    kind: "statement"
-    has:
-      kind: "block"
-      not:
-        has:
-          kind: "statement"
+    kind: "block"
+    not:
+      has:
+        kind: "statement"
+        stopBy: end
 
 fix: ""
