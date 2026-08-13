@@ -18,10 +18,8 @@ rule:
           kind: "ident"
           field: "name"
       - has:
-          kind: "block"
-          has:
-            kind: "dd"
-            stopBy: end
+          kind: "dd"
+          stopBy: end
       # `skip` is not supported in unit switch.
       - inside:
           kind: "unit_switch_case"
