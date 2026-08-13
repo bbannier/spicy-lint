@@ -12,6 +12,13 @@ rule:
     has:
       field: "init"
       kind: "expression"
+      all:
+        - not:
+            has:
+              kind: "ident"
+        - not:
+            has:
+              kind: "function_call"
 
 fix: "const"
 

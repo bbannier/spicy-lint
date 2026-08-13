@@ -2,6 +2,9 @@ id: use-const
 valid:
   - "global x: m::X;"
   - "const x = 1;"
+  - "global x: bool = f();"
+  - "global x: bool = m::f();"
+  - "global x: bool = y;"
 invalid:
   - "global x = 1;"
   - 'global a = b"";'
