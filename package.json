@@ -11,6 +11,14 @@
     "Spicy",
     "linter"
   ],
+  "bin": {
+    "spicy-lint": "spicy-lint.js"
+  },
+  "files": [
+    "spicy-lint.js",
+    "rules/",
+    "sgconfig.yml"
+  ],
   "dependencies": {
     "@ast-grep/cli": "^0.45.0",
     "tree-sitter-spicy": "github:bbannier/tree-sitter-spicy"

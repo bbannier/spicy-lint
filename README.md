@@ -6,7 +6,7 @@ linting rules.
 
 ## Quickstart
 
-Building this package requires Node. To build ast-grep support for Spicy run
+Building this package requires Node. To install run
 
 ```console
 npm install
@@ -16,10 +16,10 @@ With that you can run the bundled linting rules with
 
 ```console
 # Check all files in directory.
-./spicy-lint .
+npx spicy-lint .
 
 # Check given file(s).
-./spicy-lint foo.spicy
+npx spicy-lint foo.spicy
 ```
 
 ```ruby
@@ -32,7 +32,7 @@ type X = unit {
 ```
 
 ```console
-$ spicy-lint foo.spicy
+$ npx spicy-lint foo.spicy
 note[print-in-prod]: print in non-debug code found
   ┌─ foo.spicy:5:16
   │
@@ -73,8 +73,8 @@ less changes if the field gets renamed.
 
 ## Advanced usage
 
-The linter script `spicy-lint` is a thin convenience wrapper around
-[ast-grep(sg)](https://ast-grep.github.io/) which sets up an enviroment to run
+The `spicy-lint` command is a thin convenience wrapper around
+[ast-grep(sg)](https://ast-grep.github.io/) which sets up an environment to run
 the linting rules in this repo, but with the Spicy integration in
 `sgconfig.yml` one has access to all ast-grep(sg) features, e.g., to run queries on code with `sg run`:
 

@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-PREFIX=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
-npm exec --prefix "$PREFIX" -- sg scan -c "$PREFIX/sgconfig.yml" "$@"
