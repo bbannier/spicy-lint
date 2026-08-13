@@ -8,6 +8,8 @@ valid:
   - "public type X = struct { a: uint8[]; b: uint8; };"
   - "type X = unit { a: uint8[]; };"
   - "type X = unit { a: uint8()[]; };"
+  - "public type X = unit { a: uint8[]; on a foreach { } };"
+  - "public type X = unit { a: uint8[]; on a { } };"
 invalid:
   - "public type X = unit { a: uint8[]; };"
   - "public type X = unit { a: uint8()[]; };"

@@ -30,9 +30,17 @@ rule:
                   kind: "expression" # vector size
     inside:
       kind: "type_decl"
-      has:
-        kind: "visibility"
-        regex: "public"
+      all:
+        - has:
+            kind: "visibility"
+            regex: "public"
+        - not:
+            has:
+              kind: "hook_decl"
+              has:
+                field: "name"
+                kind: "ident"
+                pattern: "$NAME"
 
 # utils: Extract repeated rule as local utility here.
 # note: Add detailed explanation for the rule.
