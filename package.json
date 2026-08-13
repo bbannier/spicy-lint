@@ -1,29 +1,29 @@
 {
-  "name": "spicy-lint",
-  "version": "0.0.1",
-  "description": "Spicy linting setup",
-  "author": {
-    "name": "Benjamin Bannier",
-    "email": "bbannier@gmail.com"
-  },
-  "license": "MIT",
-  "keywords": [
-    "Spicy",
-    "linter"
-  ],
-  "bin": {
-    "spicy-lint": "spicy-lint.js"
-  },
-  "files": [
-    "spicy-lint.js",
-    "rules/",
-    "sgconfig.yml"
-  ],
-  "dependencies": {
-    "@ast-grep/cli": "^0.45.0",
-    "tree-sitter-spicy": "github:bbannier/tree-sitter-spicy"
-  },
-  "scripts": {
-    "test": "sg test"
-  }
+	"name": "spicy-lint",
+	"version": "0.0.1",
+	"description": "Spicy linting setup",
+	"author": {
+		"name": "Benjamin Bannier",
+		"email": "bbannier@gmail.com"
+	},
+	"license": "MIT",
+	"keywords": [
+		"Spicy",
+		"linter"
+	],
+	"bin": {
+		"spicy-lint": "spicy-lint.js"
+	},
+	"files": [
+		"spicy-lint.js",
+		"rules/",
+		"sgconfig.yml"
+	],
+	"dependencies": {
+		"@ast-grep/cli": "^0.45.0",
+		"tree-sitter-spicy": "github:bbannier/tree-sitter-spicy"
+	},
+	"scripts": {
+		"test": "sg test"
+	}
 }
