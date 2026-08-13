@@ -7,6 +7,12 @@ language: spicy
 
 rule:
   kind: "type_member"
+  not:
+    inside:
+      kind: "expression"
+      nthChild: 1
+      inside:
+        kind: "assign"
   has:
     all:
       - kind: "type_member_ident"

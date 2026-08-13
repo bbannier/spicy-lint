@@ -4,6 +4,11 @@ valid:
   - "type X = unit { x: uint8 { other.y; } };"
   - "type X = unit { y: uint8 { self.x; } };"
   - "type X = unit { x: uint8 &convert=$$ + 5 { self.x; $$; } };"
+  - "type X = unit { x: bytes &chunked &eod { self.x = a; } };"
+  - "type X = unit { x: uint8 { self.x += 1; } };"
+  - "type X = unit { x: uint8 { self.x -= 1; } };"
+  - "type X = unit { x: uint8 { self.x *= 2; } };"
+  - "type X = unit { x: uint8 { self.x /= 2; } };"
 invalid:
   - "type X = unit { x: uint8 { self.x; } };"
   - "type X = unit { x: uint8 { if (True) self.x; } };"
