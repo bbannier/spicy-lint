@@ -7,7 +7,7 @@ repos:
       - id: check-yaml
       - id: check-added-large-files
   - repo: https://github.com/biomejs/pre-commit
-    rev: 81bba2b97bae28f568b6e8096457664c930a7bbb  # frozen: v2.5.8
+    rev: 3a0c6458e3d46fb8d931600cd3970f2053768ce3  # frozen: v2.5.9
     hooks:
       - id: biome-check
       - id: biome-lint
