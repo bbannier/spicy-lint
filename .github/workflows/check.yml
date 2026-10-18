@@ -14,7 +14,7 @@ jobs:
           submodules: recursive
       - uses: actions/setup-node@v7
       - run: npm install
-      - run: npm test
+      - run: npm test -- --custom-languages=allow
 
   pre-commit:
     runs-on: "ubuntu-22.04"
