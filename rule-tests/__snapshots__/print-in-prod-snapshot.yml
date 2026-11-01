@@ -3,37 +3,37 @@ snapshots:
   on A::%done { if (True) print 1; }:
     fixed: on A::%done { if (True)  }
     labels:
-    - source: print 1;
-      style: primary
-      start: 24
-      end: 32
-    - source: on A::%done { if (True) print 1; }
-      style: secondary
-      start: 0
-      end: 34
+      - source: print 1;
+        style: primary
+        start: 24
+        end: 32
+      - source: on A::%done { if (True) print 1; }
+        style: secondary
+        start: 0
+        end: 34
   on A::%done { print 1; }:
     fixed: on A::%done {  }
     labels:
-    - source: print 1;
-      style: primary
-      start: 14
-      end: 22
-    - source: on A::%done { print 1; }
-      style: secondary
-      start: 0
-      end: 24
-  'type X = unit { x: uint8 { print $$; }};':
-    fixed: 'type X = unit { x: uint8 {  }};'
+      - source: print 1;
+        style: primary
+        start: 14
+        end: 22
+      - source: on A::%done { print 1; }
+        style: secondary
+        start: 0
+        end: 24
+  "type X = unit { x: uint8 { print $$; }};":
+    fixed: "type X = unit { x: uint8 {  }};"
     labels:
-    - source: print $$;
-      style: primary
-      start: 27
-      end: 36
-    - source: 'x: uint8 { print $$; }'
-      style: secondary
-      start: 16
-      end: 38
-    - source: '{ print $$; }'
-      style: secondary
-      start: 25
-      end: 38
+      - source: print $$;
+        style: primary
+        start: 27
+        end: 36
+      - source: "x: uint8 { print $$; }"
+        style: secondary
+        start: 16
+        end: 38
+      - source: "{ print $$; }"
+        style: secondary
+        start: 25
+        end: 38
