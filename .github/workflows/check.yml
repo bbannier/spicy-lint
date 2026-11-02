@@ -13,7 +13,7 @@ jobs:
         with:
           submodules: recursive
       - uses: actions/setup-node@v7
-      - run: npm install
+      - run: npm ci
       - run: npm test
 
   pre-commit:
