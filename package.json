@@ -24,6 +24,6 @@
 		"tree-sitter-spicy": "github:bbannier/tree-sitter-spicy"
 	},
 	"scripts": {
-		"test": "ast-grep test"
+		"test": "ast-grep --custom-languages=allow test"
 	}
 }
